@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.5;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+}
+body {
+  line-height: inherit;
+  margin: 0;
+}
+
+.text-gray-600 {
+  --tw-text-opacity: 1;
+  color: rgb(113 128 150 / var(--tw-text-opacity));
+}
+.bg-gray-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(247 250 252 / var(--tw-bg-opacity));
+}
+
+/**
+ * Swiper 
+ */
+.swiper {
+  height: 100%;
+  width: 750px;
+
+  @media screen and (max-width: 1023px) {
+    width: 100%;
+  }
+}
+.swiper .swiper-slide {
+  height: 300px;
+  width: auto;
+}
+.swiper-slide.swiper-slide-visible.swiper-slide-active {
+  opacity: 1;
+}
+.swiper-slide-next img,
+.swiper-slide-prev img {
+  opacity: 0.75 !important;
+}
+.swiper-slide:not(.swiper-slide-active) img {
+  transform: scale(0.8);
+  opacity: 0.5;
+}
+.swiper-slide img {
+  border-radius: 4px;
+  display: block;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  transition: opacity 0.3s ease-in-out;
+  width: 100%;
+}
+
+.snapchat-text {
+  font-size: 38px;
+  font-weight: 500;
+  color: #000;
+}
